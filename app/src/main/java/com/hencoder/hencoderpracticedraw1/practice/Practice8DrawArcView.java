@@ -2,6 +2,7 @@ package com.hencoder.hencoderpracticedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.support.annotation.Nullable;
@@ -38,9 +39,11 @@ public class Practice8DrawArcView extends View {
         Paint paint = new Paint();
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.FILL); // 填充模式
-        canvas.drawArc(mWidth/4, mHeight/4, (mWidth/4)*3, (mHeight/4)*3, -110, 100, true, paint); // 绘制扇形
+        //红色
+
+        canvas.drawArc(mWidth/4, mHeight/4, (mWidth/4)*3, (mHeight/4)*3, 0, -60, true, paint); // 绘制扇形
         canvas.drawArc(mWidth/4, mHeight/4, (mWidth/4)*3, (mHeight/4)*3, 20, 140, false, paint); // 绘制弧形
-        paint.setStyle(Paint.Style.STROKE); // 画线模式
+        paint.setStyle(Paint.Style.STROKE); //
         canvas.drawArc(mWidth/4, mHeight/4, (mWidth/4)*3, (mHeight/4)*3, 180, 60, false, paint); // 绘制不封口的弧形
 
     }
